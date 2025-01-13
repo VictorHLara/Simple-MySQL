@@ -1,7 +1,6 @@
 CREATE DATABASE 8107_8116_8123_8748_8772;
 
-
--- Tabela Abrigo
+-- Tabelas
 CREATE TABLE Abrigo (
     CNPJ INT PRIMARY KEY NOT NULL,
     Nome_Abrigo VARCHAR(45) NOT NULL,
@@ -10,7 +9,6 @@ CREATE TABLE Abrigo (
     Email_Abrigo VARCHAR(45) NOT NULL
 );
 
--- Tabela Adocao
 CREATE TABLE Adocao (
     ID_Adocao INT PRIMARY KEY NOT NULL,
     Data_Adocao DATE NOT NULL,
@@ -19,7 +17,6 @@ CREATE TABLE Adocao (
     ID_Animal INT NOT NULL -- FK para Animal
 );
 
--- Tabela Adotante
 CREATE TABLE Adotante (
     CPF CHAR(11) PRIMARY KEY NOT NULL,
     Nome_Adotante VARCHAR(45) NOT NULL,
@@ -28,7 +25,6 @@ CREATE TABLE Adotante (
     Endereco_Adotante VARCHAR(45) NOT NULL
 );
 
--- Tabela Animal
 CREATE TABLE Animal (
     ID_Animal INT PRIMARY KEY NOT NULL,
     Nome_Animal VARCHAR(45) NOT NULL,
@@ -41,32 +37,28 @@ CREATE TABLE Animal (
     Cod_Especie INT NOT NULL -- FK para Especie
 );
 
--- Tabela Especie
 CREATE TABLE Especie (
     Cod_Especie INT PRIMARY KEY NOT NULL,
     Cuidados VARCHAR(1000) NOT NULL
 );
 
--- Tabela Telefone_Abrigo
 CREATE TABLE Telefone_Abrigo (
     Telefone_Abrigo VARCHAR(45) NOT NULL,
     CNPJ_Abrigo INT NOT NULL -- FK para Abrigo
 );
 
--- Tabela Telefone_Adotante
 CREATE TABLE Telefone_Adotante (
     Telefone_Adotante VARCHAR(45) NOT NULL,
     CPF_Adotante CHAR(11) NOT NULL -- FK para Adotante
 );
 
--- Tabela Fotos
 CREATE TABLE Fotos (
     ID_Foto INT PRIMARY KEY AUTO_INCREMENT,
     Fotos_Animal MEDIUMBLOB NOT NULL,
     ID_Animal INT NOT NULL -- FK para Animal
 );
 
--- Adicionar as chaves estrangeiras
+-- Chaves estrangeiras
 ALTER TABLE Adocao ADD CONSTRAINT FK_Adocao_Abrigo
     FOREIGN KEY (CNPJ_Abrigo) REFERENCES Abrigo (CNPJ);
 
