@@ -1,6 +1,7 @@
 CREATE DATABASE 8107_8116_8123_8748_8772;
 
--- Tabelas
+-- Tabelas:
+
 CREATE TABLE Abrigo (
     CNPJ INT PRIMARY KEY NOT NULL,
     Nome_Abrigo VARCHAR(45) NOT NULL,
@@ -54,11 +55,12 @@ CREATE TABLE Telefone_Adotante (
 
 CREATE TABLE Fotos (
     ID_Foto INT PRIMARY KEY AUTO_INCREMENT,
-    Fotos_Animal MEDIUMBLOB NOT NULL,
+    URL_Fotos_Animal VARCHAR(60) NOT NULL,
     ID_Animal INT NOT NULL -- FK para Animal
 );
 
--- Chaves estrangeiras
+-- Definição das chaves
+
 ALTER TABLE Adocao ADD CONSTRAINT FK_Adocao_Abrigo
     FOREIGN KEY (CNPJ_Abrigo) REFERENCES Abrigo (CNPJ);
 
@@ -87,24 +89,4 @@ ALTER TABLE Telefone_Adotante ADD CONSTRAINT FK_Telefone_Adotante
 
 ALTER TABLE Fotos ADD CONSTRAINT FK_Foto_Animal
     FOREIGN KEY (ID_Animal) REFERENCES Animal (ID_Animal);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

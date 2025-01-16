@@ -1,3 +1,5 @@
+-- Inserts
+
 
 INSERT INTO Especie (Cod_Especie, Cuidados) VALUES
 (1, 'Cachorro - Ração Golden, espaço amplo, brincadeiras, socialização, banhos frequentes, passeios frequentes.'),
@@ -32,7 +34,7 @@ INSERT INTO Adotante (CPF, Nome_Adotante, Email_Adotante, Data_Nascimento, Ender
 INSERT INTO Animal (ID_Animal, Nome_Animal, Vacinas, Descricao, Sexo, Idade, Raca, CNPJ_Abrigo, Cod_Especie) VALUES
 (1, 'Krypto', 'Raiva, V8', 'Cachorro amigável e enérgico.', 'Macho', 2, 'Kryptoniano', 1001, 1),
 (2, 'muhammad sumbul', 'Nenhuma', 'Gato preparado para as cruzadas.', 'Macho', 1, 'Persa', 1002, 2),
-(3, 'Rufus', 'Todas', 'Cachorro ativo, ótimo com crianças.', 'Macho', 4, 'Husky', 1009, 1),
+(3, 'Rufus', 'Todas', 'Cachorro ativo, ótimo com crianças, muito carinhoso.', 'Macho', 4, 'Husky', 1009, 1),
 (4, 'Stray', 'Tríplice Felina', 'Gata carinhosa e sociável.', 'Fêmea', 3, 'Sem raça definida', 1004, 2),
 (5, 'Magrelinho', 'Raiva', 'Adora brincar ao ar livre e fingir de morto.', 'Macho', 5, 'Pinscher', 1005, 1),
 (6, 'Bills', 'Todas', 'Muito destrutivo, complexo de Deus.', 'Macho', 6,'Sphynx', 1006, 2),
@@ -80,15 +82,20 @@ INSERT INTO Telefone_Adotante (Telefone_Adotante, CPF_Adotante) VALUES
 ('99999-9999', '99999999999'),
 ('99999-0000', '00000000000');
 
--- Inserir dados na tabela Fotos
--- INSERT INTO Fotos (Fotos_Animal, ID_Animal) VALUES
--- (LOAD_FILE('/path/photo1.jpg'), 1),
--- (LOAD_FILE('/path/photo2.jpg'), 2),
--- (LOAD_FILE('/path/photo3.jpg'), 3),
--- (LOAD_FILE('/path/photo4.jpg'), 4),
--- (LOAD_FILE('/path/photo5.jpg'), 5),
--- (LOAD_FILE('/path/photo6.jpg'), 6),
--- (LOAD_FILE('/path/photo7.jpg'), 7),
--- (LOAD_FILE('/path/photo8.jpg'), 8),
--- (LOAD_FILE('/path/photo9.jpg'), 9),
--- (LOAD_FILE('/path/photo10.jpg'), 10);
+INSERT INTO Fotos (URL_Fotos_Animal, ID_Animal) VALUES
+('https://imgur.com/gallery/krypto-NlRtnWR', 1),
+('https://imgur.com/gallery/muhammad-sumbul-9t9dVoJ', 2),
+('https://imgur.com/gallery/moment-when-he-figured-out-we-were-going-to-vet-not-dog-park-DZqeyOO', 3),
+('https://imgur.com/gallery/gavin-takes-old-man-nap-sun-Fxv7e9E', 4),
+('https://imgur.com/gallery/upvote-rescue-galgo-CAxakid', 5),
+('https://imgur.com/gallery/elf-sphynx-kittens-first-time-being-outside-while-seeing-birds-sound-on-M3wrYiZ', 6),
+('https://imgur.com/gallery/great-dane-is-turning-8-october-hes-most-majestic-dog-i-know-MJs2reO', 7),
+('https://imgur.com/gallery/we-are-siamese-if-you-please-xlTRA', 8),
+('https://imgur.com/gallery/ha-ha-ha-ha-6Xvoq71', 10),
+('https://imgur.com/gallery/pound-r2hX0Kx', 8),
+('https://imgur.com/gallery/im-18-624-points-from-glorious-so-heres-picture-of-dog-with-two-his-mouth-XgbZdeA', 9),
+('https://imgur.com/gallery/golden-snoot-to-brighten-day-ZscgV5Y', 9),
+('https://imgur.com/gallery/10-husky-photos-3U1Uo', 3);
+
+
+
